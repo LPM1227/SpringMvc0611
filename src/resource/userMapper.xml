@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.lpm.dao.UserDao_I" >
+<!--resultType注意这个返回类型，resultMap返回类型写法不一样，可以参考别的教程-->
+  <select id="getUserName" resultType="com.springmvc.lpm.entities.UserEntity" parameterType="java.lang.String" >
+    SELECT * FROM TYXHB_USERINFO where username =#{userName} and password=#{passWord}
+  </select>
+ 
+</mapper>
